@@ -1,0 +1,607 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+*, 
+*::before,
+*::after {
+    text-decoration: none;
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+         -o-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+*:focus {
+    outline: 0 none;
+    box-shadow: 0 0 0;
+}
+
+header#menuTopo {
+    width: 100%;
+    height: 75px;
+    background-color: transparent;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    top: 0;
+    box-shadow: none;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+}
+
+header#menuTopo nav#linksMenuTopo {
+    width: 350px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header#menuTopo nav#linksMenuTopo a {
+    margin: 10px;
+    padding: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+header#menuTopo nav#socialMenuTopo {
+    width: 350px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header#menuTopo nav#socialMenuTopo a {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+header#menuTopo nav#socialMenuTopo a img.socialPreta {
+    width: 32px;
+    height: 32px;
+    opacity: 0.8;
+    cursor: pointer;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+    display: none;
+}
+
+header#menuTopo nav#socialMenuTopo a img.socialBranca {
+    width: 32px;
+    height: 32px;
+    opacity: 0.8;
+    cursor: pointer;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+    display: block;
+}
+
+header#menuTopo nav#socialMenuTopo a:hover img.socialPreta,
+header#menuTopo nav#socialMenuTopo a:hover img.socialBranca {
+    width: 42px;
+    height: 42px;
+}
+
+header#menuTopo nav#socialMenuTopo a span {
+    width: 100px;
+    height: 30px;
+    background-color: #2E4147;
+    color: #ffffff;
+    font-style: italic;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 40px;
+    opacity: 0;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+}
+
+header#menuTopo nav#socialMenuTopo a span::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #2E4147 transparent;
+}
+
+header#menuTopo nav#socialMenuTopo a:hover span {
+    top: 55px;
+    opacity: 1;
+}
+
+header#menuTopo nav#btMobile {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: none;
+}
+
+header#menuTopo nav#btMobile button#btAbrirGS {
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 15px;
+    top: 7.5px;
+    cursor: pointer;
+}
+
+header#menuTopo nav#btMobile button#btAbrirGL {
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 15px;
+    top: 7.5px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1067px) {
+
+    header#menuTopo nav#btMobile {
+        display: block;
+    }
+
+    header#menuTopo nav#linksMenuTopo,
+    header#menuTopo nav#socialMenuTopo {
+        display: none;
+    }
+
+} @media only screen and (max-width: 816px) {
+
+    header#menuTopo { 
+         justify-content: space-around;
+    }
+
+}
+
+/* Menu Hamburguer */
+
+nav#menuHam {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(69, 191, 238, 0.9);
+    left: -100vw;
+    opacity: 0;
+    z-index: 20;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+
+nav#menuHam main {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+nav#menuHam main button {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    color: #ffffff;
+    font-weight: 400;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav#menuHam main a,
+nav#menuHam main p {
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 900;
+    margin: 25px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+/* Menu Grid */
+
+nav#menuGrid {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(69, 191, 238, 0.9);
+    right: -100vw;
+    opacity: 0;
+    z-index: 30;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+
+nav#menuGrid main {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+nav#menuGrid main button {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    color: #ffffff;
+    font-weight: 900;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav#menuGrid main a {
+    width: 50px;
+    height: 50px;
+    margin: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav#menuGrid main a img{
+    width: 32px;
+    height: 32px;
+}
+
+/* Banner */
+
+section#banner {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+section#banner main {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(69, 191, 238, 0.75);
+}
+
+section#banner main h1 {
+    width: 100%;
+    font-size: 64px;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-shadow: 0px 2px 2px rgba(0, 23, 31, 0.2), 0px 4px 4px rgba(0, 23, 31, 0.1);
+}
+
+section#banner main hr {
+    width: 100px;
+    height: 1px;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 2px rgba(0, 23, 31, 0.2), 0px 4px 4px rgba(0, 23, 31, 0.1);
+    border: none;
+    margin: 10px 0px 10px 0px;
+}
+
+section#banner main h2 {
+    width: 100%;
+    font-size: 32px;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-shadow: 0px 2px 2px rgba(0, 23, 31, 0.2), 0px 4px 4px rgba(0, 23, 31, 0.1);
+}
+
+section#banner main button {
+    width: 100px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    position: absolute;
+    bottom: 15px;
+    animation: 2s verMais infinite;
+}
+
+@keyframes verMais {
+    0% {
+        bottom: 15px;
+    }
+    50% {
+        bottom: 5px;
+    }
+    100% {
+        bottom: 15px;
+    }
+}
+
+@media only screen and (max-width: 816px) {
+
+    section#bannerMain,
+    section#bannerSecondary {
+        background-size: auto;
+    }
+
+}
+
+/* Index.html */
+
+/*  Tela sobre mim */
+
+section#sobreMim {
+    width: 100%;
+    max-height: 100%;
+    padding: 75px 0px 25px 0px;
+}
+
+section#sobreMim header {
+    width: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 0px 25px 0px;
+}
+
+section#sobreMim header img {
+    width: 155px;
+    height: 155px;
+    border: 5px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0px 2px 2px rgba(0, 23, 31, 0.2), 0px 4px 4px rgba(0, 23, 31, 0.1);
+    margin-bottom: 25px;
+}
+
+section#sobreMim header h1 {
+    width: 750px;
+    padding: 0px 10px 0px 10px;
+    font-size: 16px * 1.5;
+    font-weight: 400;
+    color: #174668;
+    text-align: center;
+}
+
+section#sobreMim main {
+    width: 100%;
+    max-height: 100%;
+    padding: 25px 0px 25px 0px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+section#sobreMim main article {
+    width: 400px;
+    max-height: 100%;
+    margin-bottom: 25px; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+section#sobreMim main article h1 {
+    width: 100%;
+    font-size: 32px;
+    font-weight: 900;
+    color: #174668;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+section#sobreMim main article h2 {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    color: #17AFEA;
+    text-align: start;
+    margin-bottom: 10px;
+}
+
+section#sobreMim main article div {
+    width: 100%;
+    height: 15px;
+    background-color: #E7F7FC;
+    border: 1px solid #E7F7FC;
+    border-radius: 5px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+section#sobreMim main article div span {
+    height: 100%;
+    background-color: #174668;
+    border-radius: 5px;
+    position: absolute;
+}
+
+section#sobreMim footer {
+    width: 100%;
+    max-height: 100%;
+    padding: 25px 0px 25px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+section#sobreMim footer button {
+    width: 400px;
+    height: 50px;
+    background-color: transparent;
+    border: 2px solid #17AFEA;
+    font-weight: 900;
+    color: #17AFEA;
+    cursor: pointer;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+}
+
+section#sobreMim footer button:hover {
+    background-color: #17AFEA;
+    color: #ffffff;
+}
+
+
+/* Rodapé */
+
+footer#rodape {
+    padding: 25px 0px 25px 0px;
+    width: 100%;
+    max-height: 100%;
+    background-color: #2E4147;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer#rodape article {
+    width: 100%;
+    max-height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+footer#rodape article main {
+    width: 400px;
+    max-height: 100%;
+    margin: 10px 0px 10px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer#rodape article main:nth-child(2) {
+    width: 150px;
+    position: relative;
+}
+
+footer#rodape article main:nth-child(2) span {
+    position: absolute;
+    background-color: #ffffff;
+    color: #2E4147;
+    border-radius: 4px;
+    opacity: 0;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+}
+
+section#rodape article main:nth-child(2):hover span {
+    opacity: 1;
+}
+
+footer#rodape article main a {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+footer#rodape article main a img {
+    width: 30px;
+    height: 30px;
+}
+
+footer#rodape article h1 {
+    width: 90%;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+footer#rodape hr {
+    margin: 25px 0px 25px 0px;
+    width: 90%;
+    height: 1px;
+    border: none;
+    background-color: #ffffff;
+}
+
+@media only screen and (max-width: 967px) {
+
+    footer#rodape article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+@media only screen and (max-width: 400px) {
+
+    footer#rodape article main {
+        width: 100%;
+    }
+
+}
