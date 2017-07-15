@@ -330,7 +330,7 @@ section#banner main {
 }
 
 section#banner main h1 {
-    width: 100%;
+    width: 90%;
     font-size: 64px;
     text-align: center;
     letter-spacing: 2px;
@@ -348,7 +348,7 @@ section#banner main hr {
 }
 
 section#banner main h2 {
-    width: 100%;
+    width: 90%;
     font-size: 32px;
     text-align: center;
     letter-spacing: 2px;
@@ -364,26 +364,12 @@ section#banner main button {
     color: #ffffff;
     cursor: pointer;
     position: absolute;
-    bottom: 15px;
-    animation: 2s verMais infinite;
-}
-
-@keyframes verMais {
-    0% {
-        bottom: 15px;
-    }
-    50% {
-        bottom: 5px;
-    }
-    100% {
-        bottom: 15px;
-    }
+    bottom: 0;
 }
 
 @media only screen and (max-width: 816px) {
 
-    section#bannerMain,
-    section#bannerSecondary {
+    section#banner{
         background-size: auto;
     }
 
@@ -420,7 +406,7 @@ section#sobreMim header img {
 section#sobreMim header h1 {
     width: 750px;
     padding: 0px 10px 0px 10px;
-    font-size: 16px * 1.5;
+    font-size: 28px;
     font-weight: 400;
     color: #174668;
     text-align: center;
@@ -487,9 +473,14 @@ section#sobreMim footer {
     justify-content: center;
 }
 
-section#sobreMim footer button {
+section#sobreMim footer a {
     width: 400px;
     height: 50px;
+}
+
+section#sobreMim footer a button {
+    width: 100%;
+    height: 100%;
     background-color: transparent;
     border: 2px solid #17AFEA;
     font-weight: 900;
@@ -501,9 +492,27 @@ section#sobreMim footer button {
     transition: 0.2s;
 }
 
-section#sobreMim footer button:hover {
+section#sobreMim footer a button:hover {
     background-color: #17AFEA;
     color: #ffffff;
+}
+
+@media only screen and (max-width: 750px) {
+
+    section#sobreMim header h1 {
+        width: 90%;
+    }
+
+}
+
+
+@media only screen and (max-width: 435px) {
+
+    section#sobreMim main article,
+    section#sobreMim footer a {
+        width: 90%;
+    }
+
 }
 
 
