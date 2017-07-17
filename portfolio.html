@@ -10,9 +10,6 @@
 
     <!-- Links -->
     <link rel="stylesheet" type="text/css" href="Css/styleIndex.css">
-
-    <!-- JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -25,8 +22,14 @@
         </nav>
 
         <nav id="btMobile">
-            <button id="btAbrirGS"><img src="Imagens/Icones/iconeHam.png" alt=""></button>
-            <button id="btAbrirGL"><img src="Imagens/Icones/iconeGrid.png" alt=""></button>
+            <button id="btAbrirGS">
+                <img class="hamPreta" src="Imagens/Icones/iconeHamP.png" alt="">
+                <img class="hamBranca" src="Imagens/Icones/iconeHam.png" alt="">
+            </button>
+            <button id="btAbrirGL">
+                <img class="gridPreta" src="Imagens/Icones/iconeGridP.png" alt="">
+                <img class="gridBranca" src="Imagens/Icones/iconeGrid.png" alt="">  
+            </button>
         </nav>
 
         <nav id="socialMenuTopo">
@@ -84,9 +87,34 @@
     <section id="banner" data-speed="3">
         <main>
             <h1>Portfólio</h1>
-            <h2>Alguns Sites desenvolvido ao logo do meu curso técnico</h2>
+            <h2>Alguns Sites desenvolvidos por mim</h2>
             <button id="gtConteudo">{ Ver mais }</button>
         </main>
+    </section>
+
+    <section id="avisos">
+        <h1>Por falta de tempo ainda não estão todos aqui, mas atualizarei o mais breve possivel <3</h1>
+    </section>
+
+    <hr class="divisoria">
+
+    <section id="trabalhos">
+        <h1>Projetos</h1>
+        <article>
+            <img src="Imagens/bgMyStore.jpg" alt="">
+            <h1>MyStore (TCC)</h1>
+            <a href="https://daniel-sc.com/MyStore"><button>Visualizar</button></a>
+        </article>
+        <article>
+            <img src="" alt="">
+            <h1>Em breve</h1>
+            <a href=""><button>Em breve</button></a>
+        </article>
+        <article>
+            <img src="" alt="">
+            <h1>Em breve</h1>
+            <a href=""><button>Em breve</button></a>
+        </article>
     </section>
 
     <footer id="rodape">
@@ -112,6 +140,7 @@
         </article>
     </footer>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="JS/main.js"></script>
 </body>
 

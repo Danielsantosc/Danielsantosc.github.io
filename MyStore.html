@@ -1,0 +1,828 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>MyStore</title>
+    <link rel="stylesheet" type="text/css" href="Css/styleIndex.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="Imagens/iconeTab.ico">
+    
+    <style>
+        /* https://coolors.co/626870-718cb9-fffafa-979797-171717 */
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        *:focus {
+            box-shadow: 0 0 0 0;
+            border: 0 none;
+            outline: 0;
+        }
+
+
+        /* Menu Fixo */
+
+        header#menuFixo {
+            width: 100%;
+            height: 100px;
+            background-color: transparent;
+            position: fixed;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            -webkit-transition: 0.2s;
+            -moz-transition: 0.2s;
+            transition: 0.2s;
+            z-index: 10;
+        }
+
+        header#menuFixo a.logoMenuFixo {
+            margin-top: -150px;
+            text-decoration: none;
+            width: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            -webkit-transition: 0.2s;
+            -moz-transition: 0.2s;
+            transition: 0.2s;
+        }
+
+        header#menuFixo a.logoMenuFixo h1 {
+            width: 150px;
+            color: #626870;
+        }
+
+        header#menuFixo a.logoMenuFixo h1::first-letter {
+            font-weight: bold;
+            border: 1px solid #626870;
+            margin-right: 2px;
+        }
+
+        header#menuFixo nav {
+            width: 500px;
+            display: flex;
+            justify-content: space-around;
+            margin-right: 25px;
+        }
+
+        header#menuFixo nav a {
+            color: #fffafa;
+            font-size: large;
+            font-weight: 100;
+            text-align: center;
+            text-decoration: none;
+            letter-spacing: 1px;
+            padding: 5px;
+            -webkit-transition: 0.2s;
+            -moz-transition: 0.2s;
+            -o-transition: 0.2s;
+            transition: 0.2s;
+            cursor: pointer;
+        }
+
+        header#menuFixo nav a:hover {
+            letter-spacing: 0px;
+        }
+
+        /* Modals */
+
+        main#modals {
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            z-index: 999;
+            background-color: rgba(98, 104, 112, 0.6);
+            display: none;
+        }
+
+        main#modals section {
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+
+        main#modals section main {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main#modals section main img {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Tela Inicial */
+
+        main#telaInicial {
+            width: 100%;
+            height: 100vh;
+            background-image: url("Imagens/background.jpg");
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 50% 0;
+        }
+
+        main#telaInicial div {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(98, 104, 112, 0.8);
+        }
+
+        main#telaInicial div h1 {
+            font-size: 100px;
+            color: #fffafa;
+            text-align: center;
+            letter-spacing: 1px;
+            font-weight: 100;
+        }
+
+        main#telaInicial div h1::first-letter {
+            padding: 1px;
+            margin-right: 2px;
+            border: 1px solid #fffafa;
+            font-weight: bold;
+        }
+
+        main#telaInicial div p {
+            font-size: xx-large;
+            color: #fffafa;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+
+        /* Tela de projeto */
+
+        main#telaProjeto {
+            width: 100%;
+            min-height: 100%;
+            background-color: #fffafa;
+        }
+
+        main#telaProjeto footer.divTB {
+            width: 0;
+            height: 0;
+            border-bottom: 75px solid #626870;
+            border-right:  98.75vw solid transparent;
+        }
+
+
+        main#telaProjeto p {
+            width: 100%;
+            text-align: center;
+            font-size: 24px;
+            color: #626870;
+            margin-bottom: 50px;
+            letter-spacing: 1px;
+            padding-top: 125px;
+        }
+
+        main#telaProjeto p::first-line {
+            font-size: 100px;
+        }
+
+        main#telaProjeto section {
+            width: 100%;
+            min-height: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-content: center;
+            flex-wrap: wrap;
+            padding: 25px;
+        }
+
+        main#telaProjeto section div:nth-child(1) {
+            width: 500px;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 25px;
+        }
+
+        main#telaProjeto section div:nth-child(1) h1 {
+            font-size: 300px;
+            color: #626870;
+            border: 1px solid #626870;
+        }
+
+        main#telaProjeto section div:nth-child(2) {
+            width: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        main#telaProjeto section div:nth-child(2) p,
+        main#telaProjeto section div:nth-child(2) p::first-line {
+            font-size: 24px;
+            color: #626870;
+            letter-spacing: 1px;
+        }
+
+        main#telaProjeto section:nth-child(3) div:nth-child(2) {
+            width: 500px;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 25px;
+        }
+
+        main#telaProjeto section:nth-child(3) div:nth-child(2) h1 {
+            font-size: 300px;
+            color: #626870;
+            border: 1px solid #626870;
+            padding-right: 15px;
+        }
+
+        main#telaProjeto section:nth-child(3) div:nth-child(2) {
+            width: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        main#telaProjeto section:nth-child(3) div:nth-child(1) p,
+        main#telaProjeto section:nth-child(3) div:nth-child(1) p::first-line {
+            font-size: 24px;
+            color: #626870;
+            letter-spacing: 1px;
+        }
+
+        /* Tela de Sobre */
+
+        main#telaSobre {
+            width: 100%;
+            min-height: 100%;
+            background-color: #626870;
+            padding-top: 125px;
+        }
+
+        main#telaSobre p.ptelaSobre {
+            width: 100%;
+            text-align: center;
+            font-size: 24px;
+            color: #fffafa;
+            margin-bottom: 50px;
+            letter-spacing: 1px;
+        }
+
+        main#telaSobre p.ptelaSobre::first-line {
+            font-size: 100px;
+        }
+
+        main#telaSobre section {
+            width: 100%;
+            min-height: 100%;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        main#telaSobre section article {
+            width: 400px;
+            height: 300px;
+            box-shadow: 0px 2px 4px rgba(98, 104, 112, 0.8), 0px 4px 8px rgba(98, 104, 112, 0.4);
+            margin-bottom: 75px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #fffafa;
+            cursor: pointer;
+        }
+
+        main#telaSobre section article h1 {
+            font-size: xx-large;
+            color: #626870;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+        }
+
+        main#telaSobre section article p {
+            font-size: large;
+            color: #626870;
+            text-align: center;
+            letter-spacing: 1px;
+            margin: 10px;
+        }
+
+        main#telaSobre section article img {
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            -webkit-transition: 0.2s;
+            -moz-transition: 0.2s;
+                -o-transition: 0.2s;
+                    transition: 0.2s;
+        }
+
+        main#telaSobre section article.openModal1:hover img,
+        main#telaSobre section article.openModal2:hover img,
+        main#telaSobre section article.openModal3:hover img {
+            width: 105%;
+            height: 105%;
+        }
+
+        main#telaSobre section button {
+            width: 475px;
+            height: 75px;
+            margin-bottom: 50px;
+            background-color: #fffafa;
+            color: #626870;
+            border: none;
+            font-size: xx-large;
+            cursor: pointer;
+            -webkit-transition: 0.2s;
+            -moz-transition: 0.2s;
+                -o-transition: 0.2s;
+                    transition: 0.2s;
+        }
+
+        main#telaSobre section button:hover {
+            color: #fffafa;
+            background-color: #626870;
+            border: 1px solid #fffafa;
+        }
+
+        /* Tela equipe */
+
+        main#telaEquipe {
+            width: 100%;
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            background-color: #fffafa;
+        }
+
+        main#telaEquipe header.divTT {
+            width: 0;
+            height: 0;
+            border-top: 75px solid #626870;
+            border-left: 98.75vw solid transparent;
+            margin-bottom: 50px;
+        }
+
+        main#telaEquipe p.pTelaEquipe {
+            width: 100%;
+            text-align: center;
+            font-size: 24px;
+            color: #626870;
+            margin-bottom: 50px;
+            letter-spacing: 1px;
+        }
+
+        main#telaEquipe p.pTelaEquipe::first-line {
+            font-size: 100px;
+        }
+
+        main#telaEquipe section {
+            width: 100%;
+            min-height: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        main#telaEquipe section article {
+            width: 400px;
+            height: 550px;
+            box-shadow: 0px 2px 4px rgba(98, 104, 112, 0.8), 0px 4px 8px rgba(98, 104, 112, 0.4);
+            margin-bottom: 50px;
+            background-color: #fffafa;
+        }
+
+        main#telaEquipe section article header {
+            width: 400px;
+            height: 266px;
+        }
+
+        main#telaEquipe section article header img {
+            width: 100%;
+            height: 100%;
+        }
+
+        main#telaEquipe section article main {
+            width: 100%;
+            height: 214px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+        }
+
+        main#telaEquipe section article main h1 {
+            color: #626870;
+            font-size: xx-large;
+        }
+
+        main#telaEquipe section article main h2 {
+            font-size: x-large;
+            font-weight: bold;
+            color: #cfcfcf;
+        }
+
+        main#telaEquipe section article main p {
+            color: #626870;
+            font-size: large;
+            text-align: center;
+        }
+
+        main#telaEquipe section article footer {
+            width: 100%;
+            height: 70px;
+            padding: 10px;
+        }
+
+        main#telaEquipe section article footer button {
+            width: 100%;
+            height: 100%;
+            background-color: #626870;
+            border: none;
+            color: #fffafa;
+            font-size: large;
+            letter-spacing: 1px;
+            cursor: pointer;
+            -webkit-transition: 0.2s;
+            -moz-transition: 0.2s;
+            -o-transition: 0.2s;
+            transition: 0.2s;
+        }
+
+        main#telaEquipe section article footer button:hover {
+            background-color: #fffafa;
+            border: 1px solid #626870;
+            color: #626870;
+            letter-spacing: 0px;
+        }
+
+
+        /* Tela Contato */
+
+        main#telaContato {
+            width: 100%;
+            min-height: 100%;
+            background-color: #626870;
+            padding: 125px 10px 10px 10px;
+        }
+
+        main#telaContato iframe {
+            width: 100%;
+            height: 500px;
+        }
+
+        main#telaContato h1 {
+            color: #fffafa;
+            font-size: 100px;
+            font-weight: 100;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        main#telaContato section {
+            width: 100%;
+            min-height: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        main#telaContato section article {
+            width: 300px;
+            height: 50px;
+            margin-bottom: 50px;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+
+        main#telaContato section article h1 {
+            font-size: large;
+        }
+
+        main#telaContato section article img {
+            width: 32px;
+            height: 32px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main id="modals">
+        <section class="modal1">
+            <main>
+                <img src="Imagens/img1.png" alt="">
+            </main>
+        </section>
+        <section class="modal2">
+            <main>
+                <img src="Imagens/img2.png" alt="">
+            </main>
+        </section>
+        <section class="modal3">
+            <main>
+                <img src="Imagens/img3.png" alt="">
+            </main>
+        </section>
+    </main>
+
+    <header id="menuFixo">
+        <a class="logoMenuFixo" href="#telaInicial">
+            <h1 class="gtInicio">MyStore</h1>
+        </a>
+        <nav>
+            <a class="gtProjeto">Projeto</a>
+            <a class="gtSobre">Sobre</a>
+            <a class="gtEquipe">Equipe</a>
+            <a class="gtContato">Contato</a>
+        </nav>
+    </header>
+
+    <main id="telaInicial">
+        <div>
+            <h1>MyStore</h1>
+            <p>Seu assistente comercial online.</p>
+        </div>
+    </main>
+
+    <main id="telaProjeto">
+        <p>Projeto<br>Decifrando a MyStore</p>
+        <section>
+            <div>
+                <h1>M</h1>
+            </div>
+            <div>
+                <p>MyStore é um sistema de gerenciamento empresarial onde o usuário pode adicionar, alterar e vizualizar os dados da sua empresa, assim, podendo organiza-los em forma de gráficos e relatórios, auxiliando sua empresa e ajudando na tomada de decisões.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <p>B.I é um termo criado pelo Gartner Group que define como "um termo genérico que inclui aplicações, infraestrutura, ferramentas e melhores práticas que permitem o acesso e análise de informações para melhorar e otimizar decisões e desempenho".
+                </p>
+            </div>
+            <div>
+                <h1>B.i</h1>
+            </div>
+        </section>
+        <footer class="divTB">
+
+        </footer>
+    </main>
+
+    <main id="telaSobre">
+        <p class="ptelaSobre">Sobre<br>Um pouco mais sobre o projeto!</p>
+        <section>
+            <article>
+                <h1>Adicione e gerencie</h1>
+                <p>Colete e gerencie dados da sua empresa!</p>
+            </article>
+            <article>
+                <h1>Gráficos</h1>
+                <p>Gere gráficos em tempo real de dados da sua empresa para ajudar na tomada de decisão!</p>
+            </article>
+            <article>
+                <h1>Relatórios</h1>
+                <p>Crie relatórios quando quiser, podendo imprimi-los ou salvar em forma de pdf!</p>
+            </article>
+        </section>
+
+        <p class="ptelaSobre">Fotos<br>Aparência do programa!</p>
+        <section>
+            <article class="openModal1">
+                <img src="Imagens/img1.png" alt="">
+            </article>
+            <article class="openModal2">
+                <img src="Imagens/img2.png" alt="">
+            </article>
+            <article class="openModal3">
+                <img src="Imagens/img3.png" alt="">
+            </article>
+        </section>
+
+        <p class="ptelaSobre">Download<br>Baixe agora mesmo!</p>   
+        <section>
+            <a href="MyStore.rar"><button>Download</button></a>
+        </section>
+    </main>
+
+    <main id="telaEquipe">
+        <header class="divTT">
+
+        </header>
+        <p class="pTelaEquipe">Equipe<br>As pessoas por trás do projeto!</p>
+        <section>
+            <article>
+                <header>
+                    <img src="Imagens/fotoDanielS.jpg" alt="">
+                </header>
+                <main>
+                    <h1>Daniel Santos</h1>
+                    <h2>Web Designer</h2>
+                    <p>Responsável pela programação e design de toda parte WEB</p>
+                </main>
+                <footer>
+                    <a href="https://www.facebook.com/profile.php?id=100003793831991&ref=br_rs"><button>Contato</button></a>
+                </footer>
+            </article>
+            <article>
+                <header>
+                    <img src="Imagens/fotoDanielP.jpg" alt="">
+                </header>
+                <main>
+                    <h1>Daniel Pessoa</h1>
+                    <h2>DB Manager</h2>
+                    <p>Responsável pelo planejamento e desenvolvimento do banco de dados</p>
+                </main>
+                <footer>
+                    <a href="https://www.facebook.com/daniel.pessoa.37017"><button>Contato</button></a>
+                </footer>
+            </article>
+            <article>
+                <header>
+                    <img src="Imagens/fotoDanielZ.jpg" alt="">
+                </header>
+                <main>
+                    <h1>Daniel Zampelin</h1>
+                    <h2>Analista</h2>
+                    <p>Responsável pela análise e monitoramento do projeto</p>
+                </main>
+                <footer>
+                    <a href="https://www.facebook.com/Zampelin"><button>Contato</button></a>
+                </footer>
+            </article>
+            <article>
+                <header>
+                    <img src="Imagens/fotoJp.jpg" alt="">
+                </header>
+                <main>
+                    <h1>João Pedro Luchiari</h1>
+                    <h2>Programador C#</h2>
+                    <p>Responsável pela programação e design de toda parte DESKTOP</p>
+                </main>
+                <footer>
+                    <a href="https://www.facebook.com/joaopedro.luchiari?ref=br_rs"><button>Contato</button></a>
+                </footer>
+            </article>
+            <article>
+                <header>
+                    <img src="Imagens/fotoPedro.jpg" alt="">
+                </header>
+                <main>
+                    <h1>Pedro Henrique</h1>
+                    <h2>Relator</h2>
+                    <p>Responsável pelo trabalho escrito e auxílio no projeto</p>
+                </main>
+                <footer>
+                    <a href="https://www.facebook.com/pedrohenrique.amoedocarvalhowolkmer"><button>Contato</button></a>
+                </footer>
+            </article>
+        </section>
+    </main>
+
+    <main id="telaContato">
+        <h1>Contato</h1>
+        <section>
+            <article>
+                <img src="Imagens/iconeEmail.png" alt="Email">
+                <h1>daniel.santosc98@outlook.com</h1>
+            </article>
+            <article>
+                <img src="Imagens/iconeTelefone.png" alt="Telefone">
+                <h1>(19)99397-9928</h1>
+            </article>
+            <article>
+                <img src="Imagens/iconeLoc.png" alt="Cidade">
+                <h1>Americana-SP</h1>
+            </article>
+        </section>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.8038072946983!2d-47.31685598503759!3d-22.73553248509922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c89a2328b1cc89%3A0x9c221a3f4178ee42!2sEscola+T%C3%A9cnica+Estadual+Polivalente!5e0!3m2!1spt-BR!2sbr!4v1497377186277" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        // Menu Fixo 
+
+        var w = $(window);
+
+        w.on("scroll", function() {
+            if (w.scrollTop() != 0) {
+                sTelaInicial();
+            } else {
+                eTelaInicial();
+            }
+        });
+
+        function sTelaInicial() {
+            $("#menuFixo").css({ "background-color": "snow", "box-shadow": "0px 2px 2px rgba(0, 0, 0, 0.2), 0px 4px 16px rgba(0, 0, 0, 0.2)" });
+            $("#menuFixo a.logoMenuFixo").css({ "margin-top": "0px" });
+            $("#menuFixo nav a").css({ "color": "#626870" });
+        }
+
+        function eTelaInicial() {
+            $("#menuFixo").css({ "background-color": "transparent", "box-shadow": "none" });
+            $("#menuFixo a.logoMenuFixo").css({ "margin-top": "-150px" });
+            $("#menuFixo nav a").css({ "color": "snow" });
+        }
+
+        $(document).ready(function() {
+            
+            $(".gtInicio").click(function() {
+                $('html, body').animate({
+                    scrollTop: $("#telaInicial").offset().top
+                }, 750);
+            });
+
+            $(".gtProjeto").click(function() {
+                $('html, body').animate({
+                    scrollTop: $("#telaProjeto").offset().top
+                }, 750);
+            });
+
+            $(".gtSobre").click(function() {
+                $('html, body').animate({
+                    scrollTop: $("#telaSobre").offset().top
+                }, 750);
+            });
+
+            $(".gtEquipe").click(function() {
+                $('html, body').animate({
+                    scrollTop: $("#telaEquipe").offset().top
+                }, 750);
+            });
+
+            $(".gtContato").click(function() {
+                $('html, body').animate({
+                    scrollTop: $("#telaContato").offset().top
+                }, 750);
+            });
+
+            // Parallax
+
+            $("main#telaInicial").each(function(){
+            var obj = $(this);
+
+                $(window).scroll(function() {
+
+                    var yPos = -($(window).scrollTop() / 5); 
+
+                    var bgpos = "50% "+ yPos + "px";
+
+                    obj.css('background-position', bgpos );
+
+                }); 
+
+            });
+
+            // Modal fotos
+
+            $("#modals").click(function() {
+                $("#modals").fadeOut(200);
+                $(".modal1").hide();
+                $(".modal2").hide();
+                $(".modal3").hide();
+            });
+
+            $(".openModal1").click(function() {
+                $("#modals").fadeIn(200);
+                $(".modal1").show();
+            });
+
+            $(".openModal2").click(function() {
+                $("#modals").fadeIn(200);
+                $(".modal2").show();
+            });
+
+            $(".openModal3").click(function() {
+                $("#modals").fadeIn(200);
+                $(".modal3").show();
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>

@@ -10,9 +10,6 @@
 
     <!-- Links -->
     <link rel="stylesheet" type="text/css" href="Css/styleIndex.css">
-
-    <!-- JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -25,8 +22,14 @@
         </nav>
 
         <nav id="btMobile">
-            <button id="btAbrirGS"><img src="Imagens/Icones/iconeHam.png" alt=""></button>
-            <button id="btAbrirGL"><img src="Imagens/Icones/iconeGrid.png" alt=""></button>
+            <button id="btAbrirGS">
+                <img class="hamPreta" src="Imagens/Icones/iconeHamP.png" alt="">
+                <img class="hamBranca" src="Imagens/Icones/iconeHam.png" alt="">
+            </button>
+            <button id="btAbrirGL">
+                <img class="gridPreta" src="Imagens/Icones/iconeGridP.png" alt="">
+                <img class="gridBranca" src="Imagens/Icones/iconeGrid.png" alt="">  
+            </button>
         </nav>
 
         <nav id="socialMenuTopo">
@@ -84,9 +87,22 @@
     <section id="banner" data-speed="3">
         <main>
             <h1>Contato</h1>
-            <h2>Me mande uma mensagem e me acompanhe nas redes sociais :)</h2>
+            <h2>Me mande uma mensagem :)</h2>
             <button id="gtConteudo">{ Ver mais }</button>
         </main>
+    </section>
+
+    <section id="contato">
+        <article>
+            <h1>Me mande uma mensagem</h1>
+            <p>Responderei assim que possivel :)</p>
+            <form method="POST" action="http://formspree.io/dasaca98@gmail.com">
+                <input type="email" name="email" placeholder="Seu email">
+                <textarea name="message" placeholder="Mensagem..."></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+            <p>Powered by <a href="https://formspree.io/">Formspree</a></p>
+        </article>
     </section>
 
     <footer id="rodape">
@@ -112,6 +128,7 @@
         </article>
     </footer>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="JS/main.js"></script>
 </body>
 </html>
