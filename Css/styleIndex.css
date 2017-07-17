@@ -44,6 +44,13 @@ header#menuTopo nav#linksMenuTopo {
     flex-wrap: wrap;
 }
 
+header#menuTopo nav#linksMenuTopo hr {
+    width: 1px;
+    height: 30px;
+    border: none;
+    background-color: #17AFEA;
+}
+
 header#menuTopo nav#linksMenuTopo a {
     margin: 10px;
     padding: 5px;
@@ -147,8 +154,8 @@ header#menuTopo nav#btMobile {
 }
 
 header#menuTopo nav#btMobile button#btAbrirGS {
-    width: 60px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
     background-color: transparent;
     border: none;
     display: flex;
@@ -156,13 +163,13 @@ header#menuTopo nav#btMobile button#btAbrirGS {
     align-items: center;
     position: absolute;
     left: 15px;
-    top: 7.5px;
+    top: 22.5px;
     cursor: pointer;
 }
 
 header#menuTopo nav#btMobile button#btAbrirGL {
-    width: 60px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
     background-color: transparent;
     border: none;
     display: flex;
@@ -170,8 +177,19 @@ header#menuTopo nav#btMobile button#btAbrirGL {
     align-items: center;
     position: absolute;
     right: 15px;
-    top: 7.5px;
+    top: 22.5px;
     cursor: pointer;
+}
+
+header#menuTopo nav#btMobile button#btAbrirGL img,
+header#menuTopo nav#btMobile button#btAbrirGS img {
+    width: 100%;
+    height: 100%;
+}
+
+header#menuTopo nav#btMobile button#btAbrirGL img.gridPreta,
+header#menuTopo nav#btMobile button#btAbrirGS img.hamPreta {
+    display: none;
 }
 
 @media only screen and (max-width: 1067px) {
@@ -199,7 +217,7 @@ nav#menuHam {
     width: 100%;
     height: 100vh;
     position: fixed;
-    background-color: rgba(69, 191, 238, 0.9);
+    background-color: rgba(69, 191, 238, 0.95);
     left: -100vw;
     opacity: 0;
     z-index: 20;
@@ -226,14 +244,11 @@ nav#menuHam main button {
     border: 2px solid #ffffff;
     border-radius: 50%;
     color: #ffffff;
-    font-weight: 400;
+    font-weight: 900;
     position: absolute;
     top: 25px;
     right: 25px;
     cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 nav#menuHam main a,
@@ -252,7 +267,7 @@ nav#menuGrid {
     width: 100%;
     height: 100vh;
     position: fixed;
-    background-color: rgba(69, 191, 238, 0.9);
+    background-color: rgba(69, 191, 238, 0.95);
     right: -100vw;
     opacity: 0;
     z-index: 30;
@@ -284,9 +299,6 @@ nav#menuGrid main button {
     top: 25px;
     right: 25px;
     cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 nav#menuGrid main a {
@@ -335,16 +347,8 @@ section#banner main h1 {
     text-align: center;
     letter-spacing: 2px;
     color: #ffffff;
+    font-weight: 900;
     text-shadow: 0px 2px 2px rgba(0, 23, 31, 0.2), 0px 4px 4px rgba(0, 23, 31, 0.1);
-}
-
-section#banner main hr {
-    width: 100px;
-    height: 1px;
-    background-color: #ffffff;
-    box-shadow: 0px 2px 2px rgba(0, 23, 31, 0.2), 0px 4px 4px rgba(0, 23, 31, 0.1);
-    border: none;
-    margin: 10px 0px 10px 0px;
 }
 
 section#banner main h2 {
@@ -353,6 +357,7 @@ section#banner main h2 {
     text-align: center;
     letter-spacing: 2px;
     color: #ffffff;
+    font-weight: 100;
     text-shadow: 0px 2px 2px rgba(0, 23, 31, 0.2), 0px 4px 4px rgba(0, 23, 31, 0.1);
 }
 
@@ -385,6 +390,15 @@ section#sobreMim {
     padding: 75px 0px 25px 0px;
 }
 
+
+section#sobreMim hr {
+    width: 90%;
+    height: 1px;
+    border: none;
+    background-color: rgba(69, 191, 238, 0.5);
+    margin: 25px 5% 25px 5%;
+}
+
 section#sobreMim header {
     width: 100%;
     max-height: 100%;
@@ -406,13 +420,16 @@ section#sobreMim header img {
 section#sobreMim header h1 {
     width: 750px;
     padding: 0px 10px 0px 10px;
-    font-size: 28px;
-    font-weight: 400;
+    font-size: 26px;
+    font-weight: 100;
     color: #174668;
     text-align: center;
+    letter-spacing: 1px;
 }
 
-section#sobreMim main {
+/* Competencias */
+
+section#sobreMim main#competencia {
     width: 100%;
     max-height: 100%;
     padding: 25px 0px 25px 0px;
@@ -421,7 +438,7 @@ section#sobreMim main {
     flex-wrap: wrap;
 }
 
-section#sobreMim main article {
+section#sobreMim main#competencia article {
     width: 400px;
     max-height: 100%;
     margin-bottom: 25px; 
@@ -430,25 +447,27 @@ section#sobreMim main article {
     align-items: flex-start;
 }
 
-section#sobreMim main article h1 {
+section#sobreMim main#competencia article h1 {
     width: 100%;
     font-size: 32px;
     font-weight: 900;
     color: #174668;
     margin-bottom: 15px;
     text-align: center;
+    letter-spacing: 1px;
 }
 
-section#sobreMim main article h2 {
+section#sobreMim main#competencia article h2 {
     width: 100%;
     font-size: 16px;
     font-weight: 400;
     color: #17AFEA;
     text-align: start;
     margin-bottom: 10px;
+    letter-spacing: 1px;
 }
 
-section#sobreMim main article div {
+section#sobreMim main#competencia article div {
     width: 100%;
     height: 15px;
     background-color: #E7F7FC;
@@ -458,43 +477,78 @@ section#sobreMim main article div {
     margin-bottom: 10px;
 }
 
-section#sobreMim main article div span {
+section#sobreMim main#competencia article div span {
     height: 100%;
     background-color: #174668;
     border-radius: 5px;
     position: absolute;
 }
 
-section#sobreMim footer {
+/* Metas */
+
+main#metas {
     width: 100%;
     max-height: 100%;
     padding: 25px 0px 25px 0px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-section#sobreMim footer a {
-    width: 400px;
-    height: 50px;
-}
-
-section#sobreMim footer a button {
+main#metas h1 {
     width: 100%;
-    height: 100%;
-    background-color: transparent;
-    border: 2px solid #17AFEA;
-    font-weight: 900;
-    color: #17AFEA;
-    cursor: pointer;
-    -webkit-transition: 0.2s;
-    -moz-transition: 0.2s;
-    -o-transition: 0.2s;
-    transition: 0.2s;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #174668;
+    font-size: 28px;
+    letter-spacing: 1px;
 }
 
-section#sobreMim footer a button:hover {
-    background-color: #17AFEA;
-    color: #ffffff;
+main#metas article {
+    width: 350px;
+    height: 150px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main#metas article h1 {
+    margin-bottom: 5px;
+    color: #17AFEA;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+main#metas article p {
+    width: 100%;
+    color: #2E4147;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+/* links */
+
+main#links {
+    width: 100%;
+    max-height: 100%;
+    padding: 25px 0px 25px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+main#links p {
+    color: #174668;
+    letter-spacing: 1px;
+}
+
+main#links p a {
+    color: #17AFEA;
+    text-decoration: underline;
 }
 
 @media only screen and (max-width: 750px) {
@@ -508,7 +562,7 @@ section#sobreMim footer a button:hover {
 
 @media only screen and (max-width: 435px) {
 
-    section#sobreMim main article,
+    section#sobreMim main#competencia article,
     section#sobreMim footer a {
         width: 90%;
     }
@@ -547,25 +601,10 @@ footer#rodape article main {
     align-items: center;
 }
 
-footer#rodape article main:nth-child(2) {
-    width: 150px;
-    position: relative;
-}
-
-footer#rodape article main:nth-child(2) span {
-    position: absolute;
-    background-color: #ffffff;
-    color: #2E4147;
-    border-radius: 4px;
-    opacity: 0;
-    -webkit-transition: 0.2s;
-    -moz-transition: 0.2s;
-    -o-transition: 0.2s;
-    transition: 0.2s;
-}
-
-section#rodape article main:nth-child(2):hover span {
-    opacity: 1;
+footer#rodape article main:nth-child(2),
+footer#rodape article main:nth-child(2) img {
+    width: 50px;
+    height: 50px;
 }
 
 footer#rodape article main a {
@@ -586,7 +625,12 @@ footer#rodape article h1 {
     text-align: center;
     color: #ffffff;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 10px;
+}
+
+footer#rodape article h1 a {
+    color: #ffffff;
+    text-decoration: underline;
 }
 
 footer#rodape hr {

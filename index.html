@@ -19,13 +19,20 @@
     <header id="menuTopo">
         <nav id="linksMenuTopo">
             <a href="https://daniel-sc.com" title="Um pouco mais sobre mim">Pagina inicial</a>
-            <a href="https://daniel-sc.com/contato" title="Meu trabalho">Contato</a>
             <a href="https://daniel-sc.com/portfolio" title="Conheça meu portfólio">Portfólio</a>
+            <hr>
+            <a href="https://daniel-sc.com/contato" title="Meu trabalho">Contato</a>
         </nav>
 
         <nav id="btMobile">
-            <button id="btAbrirGS"><img src="Imagens/Icones/iconeHam.png" alt=""></button>
-            <button id="btAbrirGL"><img src="Imagens/Icones/iconeGrid.png" alt=""></button>
+            <button id="btAbrirGS">
+                <img class="hamPreta" src="Imagens/Icones/iconeHamP.png" alt="">
+                <img class="hamBranca" src="Imagens/Icones/iconeHam.png" alt="">
+            </button>
+            <button id="btAbrirGL">
+                <img class="gridPreta" src="Imagens/Icones/iconeGridP.png" alt="">
+                <img class="gridBranca" src="Imagens/Icones/iconeGrid.png" alt="">  
+            </button>
         </nav>
 
         <nav id="socialMenuTopo">
@@ -56,8 +63,8 @@
         <main>
             <button class="closeMenuHam">X</button>
             <a href="https://daniel-sc.com" title="Um pouco mais sobre mim">Pagina inicial</a>
-            <a href="https://daniel-sc.com/contato" title="Meu trabalho">Contato</a>
             <a href="https://daniel-sc.com/portfolio" title="Conheça meu portfólio">Portfólio</a>
+            <a href="https://daniel-sc.com/contato" title="Meu trabalho">Contato</a>
         </main>
     </nav>
 
@@ -83,7 +90,6 @@
     <section id="banner" data-speed="3">
         <main>
             <h1>Daniel Santos</h1>
-            <hr>
             <h2>Site pessoal e portfólio</h2>
             <button id="gtConteudo">{ Ver mais }</button>
         </main>
@@ -92,11 +98,10 @@
     <section id="sobreMim">
         <header>
             <img src="Imagens/fotoSobre.JPG" alt="Daniel Santos">
-            <h1>Comecei a me interessar por programação a pouco mais de um ano, e desde então já passei pelas linguagens c# e
-                java até cair na programação WEB onde me interessei e nao larguei mais, abaixo estão alguma de minhas competências
-                (Baseado no tempo gasto estudando) e interesses para um futuro não tão distante.</h1>
+            <h1>Meu nome e Daniel dos Santos Cardoso e tenho 18 anos, comecei a me interessar por programação a pouco mais de um ano, e desde então já passei pelas linguagens c# e java até cair na programação WEB onde me interessei e não larguei mais, criei esse site para divulgar meu trabalho e pretendo atualiza-lo, criar um blog e postar vários tutoriais, abaixo estão algumas de minhas competências (Baseado no tempo gasto estudando) e interesses para um futuro não tão distante.</h1>
         </header>
-        <main>
+        <hr>
+        <main id="competencia">
             <article>
                 <h1>Competências</h1>
                 <h2>Html/Css</h2>
@@ -136,17 +141,34 @@
                 </div>
             </article>
         </main>
-        <footer>
-            <a href="https://daniel-sc.com/contato"><button>Contato</button></a>
-        </footer>
+        <hr>
+        <main id="metas">
+            <h1>Minhas metas para o futuro</h1>
+            <article>
+                <h1>Estudar</h1>
+                <p>Pretendo entrar em alguma faculdade e/ou fazer mais cursos presenciais e online para evoluir e expandir minhas competências, para melhorar meus projetos e conseguir estar sempre evoluindo em meus projetos.</p>
+            </article>
+            <article>
+                <h1>Seguir carreira</h1>
+                <p>Obter experiencia e conhecimento dessa profissão, como trabalhar em equipe, desenvolver projetos e saber lidar com os clientes e assim, já ter experiencia para abrir minha própria agência.</p>
+            </article>
+            <article>
+                <h1>Blog</h1>
+                <p>Transformar esse site em um blog para compartilhar todas minhas experiências e meus conhecimentos adquirido tanto nos meus estudos quanto na minha carreira.</p>
+            </article>
+        </main>
+        <hr>
+        <main id="links">
+            <p>Veja meu <a href="https://daniel-sc.com/portfolio" title="Conheça meu portfólio">Portfólio</a> ou então entre em <a href="https://daniel-sc.com/contato" title="Meu trabalho">Contato</a> :)</p>
+        </main>
     </section>
 
     <footer id="rodape">
         <article>
             <main>
                 <a href="https://daniel-sc.com" title="Um pouco mais sobre mim">Pagina inicial</a>
-                <a href="https://daniel-sc.com/contato" title="Meu trabalho">Contato</a>
                 <a href="https://daniel-sc.com/portfolio" title="Conheça meu portfólio">Portfólio</a>
+                <a href="https://daniel-sc.com/contato" title="Meu trabalho">Contato</a>
             </main>
             <main>
                 <img src="Imagens/Icones/iconeCoracao.png" alt="<3">
@@ -160,7 +182,7 @@
         </article>
         <hr>
         <article>
-            <h1>{{ site.description }}</h1>
+            <h1>Made by <a href="https://daniel-sc.com/">@DS</a></h1>
         </article>
     </footer>
 
