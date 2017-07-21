@@ -1,11 +1,11 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 
 *, 
 *::before,
 *::after {
     text-decoration: none;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
     padding: 0;
     margin: 0;
     -webkit-box-sizing: border-box;
@@ -54,8 +54,8 @@ header#menuTopo nav#linksMenuTopo hr {
 header#menuTopo nav#linksMenuTopo a {
     margin: 10px;
     padding: 5px;
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 14px;
+    font-weight: 100;
     letter-spacing: 1px;
     text-align: center;
     color: #ffffff;
@@ -342,7 +342,7 @@ section#banner main {
 }
 
 section#banner main h1 {
-    width: 90%;
+    padding: 5px 10px 5px 10px;
     font-size: 64px;
     text-align: center;
     letter-spacing: 2px;
@@ -352,7 +352,7 @@ section#banner main h1 {
 }
 
 section#banner main h2 {
-    width: 90%;
+    padding: 5px 10px 5px 10px;
     font-size: 32px;
     text-align: center;
     letter-spacing: 2px;
@@ -362,14 +362,45 @@ section#banner main h2 {
 }
 
 section#banner main button {
-    width: 100px;
-    height: 50px;
+    width: 20px;
+    height: 30px;
     background-color: transparent;
-    border: none;
-    color: #ffffff;
+    border: 4px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
     cursor: pointer;
     position: absolute;
-    bottom: 0;
+    bottom: 10px;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+section#banner main button span {
+    width: 6px;
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 13px;
+    left: 3px;
+    opacity: 0;
+    animation: scroll 1.5s infinite;
+}
+
+@keyframes scroll {
+    0% {
+        bottom: 13px;
+        opacity: 0;
+    }
+    50% {
+        bottom: 8px;
+        opacity: 1;
+    }
+    100% {
+        bottom: 3px;
+        opacity: 0;
+    }
 }
 
 @media only screen and (max-width: 816px) {
@@ -387,16 +418,15 @@ section#banner main button {
 section#sobreMim {
     width: 100%;
     max-height: 100%;
-    padding: 75px 0px 25px 0px;
+    padding: 25px 0px 25px 0px;
 }
 
 
 section#sobreMim hr {
-    width: 90%;
+    width: 100%;
     height: 1px;
     border: none;
-    background-color: rgba(69, 191, 238, 0.5);
-    margin: 25px 5% 25px 5%;
+    background-color: rgba(0, 23, 31, 0.1);
 }
 
 section#sobreMim header {
@@ -408,23 +438,25 @@ section#sobreMim header {
     padding: 25px 0px 25px 0px;
 }
 
-section#sobreMim header img {
-    width: 155px;
-    height: 155px;
-    border: 5px solid #ffffff;
-    border-radius: 50%;
-    box-shadow: 0px 2px 2px rgba(0, 23, 31, 0.2), 0px 4px 4px rgba(0, 23, 31, 0.1);
+section#sobreMim header h1 {
+    padding-top: 10px;
+    font-size: 28px;
+    font-weight: 900;
+    color: #2E4147;
+    letter-spacing: 0.5px;
     margin-bottom: 25px;
+    border-top: 3px solid rgba(0, 23, 31, 0.3);
 }
 
-section#sobreMim header h1 {
-    width: 750px;
+section#sobreMim header p {
+    width: 550px;
     padding: 0px 10px 0px 10px;
-    font-size: 26px;
+    font-size: 20px;
     font-weight: 100;
     color: #174668;
     text-align: center;
     letter-spacing: 1px;
+    margin-bottom: 25px;
 }
 
 /* Competencias */
@@ -434,14 +466,15 @@ section#sobreMim main#competencia {
     max-height: 100%;
     padding: 25px 0px 25px 0px;
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F4FAFC;
 }
 
 section#sobreMim main#competencia article {
-    width: 400px;
+    width: 70%;
     max-height: 100%;
-    margin-bottom: 25px; 
+    margin-bottom: 50px; 
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -469,12 +502,12 @@ section#sobreMim main#competencia article h2 {
 
 section#sobreMim main#competencia article div {
     width: 100%;
-    height: 15px;
+    height: 30px;
     background-color: #E7F7FC;
     border: 1px solid #E7F7FC;
     border-radius: 5px;
     position: relative;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
 }
 
 section#sobreMim main#competencia article div span {
@@ -506,27 +539,30 @@ main#metas h1 {
 
 main#metas article {
     width: 350px;
-    height: 150px;
+    max-height: 100%;
+    padding: 25px 15px 25px 15px;
     margin-bottom: 25px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
+    background-color: #F4FAFC;
+    box-shadow: 0px 2px 4px rgba(0, 23, 31, 0.3), 0px 4px 8px rgba(0, 23, 31, 0.1);
 }
 
 main#metas article h1 {
-    margin-bottom: 5px;
+    margin-bottom: 25px;
     color: #17AFEA;
     font-size: 28px;
+    font-weight: 900;
     letter-spacing: 1px;
 }
 
 main#metas article p {
-    width: 100%;
-    color: #2E4147;
+    color: #174668;
     text-align: center;
+    font-weight: 100;
     font-size: 18px;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 }
 
 /* links */
@@ -543,18 +579,20 @@ main#links {
 
 main#links p {
     color: #174668;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     text-align: center;
+    font-weight: 100;
 }
 
 main#links p a {
     color: #17AFEA;
-    text-decoration: underline;
+    letter-spacing: 1px;
+    font-weight: 900;
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 550px) {
 
-    section#sobreMim header h1 {
+    section#sobreMim header p {
         width: 90%;
     }
 
@@ -757,7 +795,7 @@ footer#rodape {
     background-color: #2E4147;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -813,8 +851,8 @@ footer#rodape article h1 a {
 
 footer#rodape hr {
     margin: 25px 0px 25px 0px;
-    width: 90%;
-    height: 1px;
+    width: 95%;
+    height: 2px;
     border: none;
     background-color: #ffffff;
 }

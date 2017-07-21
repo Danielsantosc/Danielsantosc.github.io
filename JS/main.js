@@ -58,6 +58,7 @@ $(window).on("scroll", function () {
     var menuTopoImagensPreta = $("#menuTopo #socialMenuTopo a img.socialPreta");
     var menuTopoMenusBranca = $(".gridBranca, .hamBranca");
     var menuTopoMenusPreta = $(".gridPreta, .hamPreta");
+    var iconeScroll = $("#gtConteudo");
 
     if (top > 0) {
         menuTopo.css({ "background-color" : "#ffffff", "box-shadow" : "0px 2px 2px rgba(0, 23, 31, 0.2), 0px 4px 4px rgba(0, 23, 31, 0.1)" });
@@ -66,6 +67,7 @@ $(window).on("scroll", function () {
         menuTopoImagensPreta.css({ "display" : "block" });
         menuTopoMenusPreta.css({ "display" : "block" });
         menuTopoMenusBranca.css({ "display" : "none" });
+        iconeScroll.css({ "opacity" : "0" });
     } else {
         menuTopo.css({ "background-color" : "transparent", "box-shadow" : "none" });
         menuTopoLink.css({ "color" : "#ffffff" });
@@ -73,6 +75,7 @@ $(window).on("scroll", function () {
         menuTopoImagensPreta.css({ "display" : "none" });
         menuTopoMenusPreta.css({ "display" : "none" });
         menuTopoMenusBranca.css({ "display" : "block" });
+        iconeScroll.css({ "opacity" : "1" });
     }
 
     // parallax
