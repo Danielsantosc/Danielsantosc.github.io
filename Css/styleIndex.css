@@ -1,11 +1,11 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 
 *, 
 *::before,
 *::after {
     text-decoration: none;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     padding: 0;
     margin: 0;
     -webkit-box-sizing: border-box;
@@ -24,9 +24,6 @@ header#menuTopo {
     height: 75px;
     background-color: transparent;
     position: fixed;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     z-index: 10;
     top: 0;
     box-shadow: none;
@@ -36,7 +33,16 @@ header#menuTopo {
     transition: 0.2s;
 }
 
-header#menuTopo nav#linksMenuTopo {
+header#menuTopo div {
+    width: 100%;
+    height: 100%;
+    padding: 0px 25px 0px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header#menuTopo div nav#linksMenuTopo {
     width: 350px;
     display: flex;
     justify-content: space-around;
@@ -44,17 +50,10 @@ header#menuTopo nav#linksMenuTopo {
     flex-wrap: wrap;
 }
 
-header#menuTopo nav#linksMenuTopo hr {
-    width: 1px;
-    height: 30px;
-    border: none;
-    background-color: #17AFEA;
-}
-
-header#menuTopo nav#linksMenuTopo a {
+header#menuTopo div nav#linksMenuTopo a {
     margin: 10px;
     padding: 5px;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 100;
     letter-spacing: 1px;
     text-align: center;
@@ -62,7 +61,11 @@ header#menuTopo nav#linksMenuTopo a {
     cursor: pointer;
 }
 
-header#menuTopo nav#socialMenuTopo {
+header#menuTopo div nav#linksMenuTopo a:hover {
+    text-decoration: underline;
+}
+
+header#menuTopo div nav#socialMenuTopo {
     width: 350px;
     display: flex;
     justify-content: space-around;
@@ -70,7 +73,7 @@ header#menuTopo nav#socialMenuTopo {
     flex-wrap: wrap;
 }
 
-header#menuTopo nav#socialMenuTopo a {
+header#menuTopo div nav#socialMenuTopo a {
     width: 50px;
     height: 50px;
     background-color: transparent;
@@ -81,7 +84,7 @@ header#menuTopo nav#socialMenuTopo a {
     position: relative;
 }
 
-header#menuTopo nav#socialMenuTopo a img.socialPreta {
+header#menuTopo div nav#socialMenuTopo a img.socialPreta {
     width: 32px;
     height: 32px;
     opacity: 0.8;
@@ -93,7 +96,7 @@ header#menuTopo nav#socialMenuTopo a img.socialPreta {
     display: none;
 }
 
-header#menuTopo nav#socialMenuTopo a img.socialBranca {
+header#menuTopo div nav#socialMenuTopo a img.socialBranca {
     width: 32px;
     height: 32px;
     opacity: 0.8;
@@ -105,13 +108,13 @@ header#menuTopo nav#socialMenuTopo a img.socialBranca {
     display: block;
 }
 
-header#menuTopo nav#socialMenuTopo a:hover img.socialPreta,
-header#menuTopo nav#socialMenuTopo a:hover img.socialBranca {
+header#menuTopo div nav#socialMenuTopo a:hover img.socialPreta,
+header#menuTopo div nav#socialMenuTopo a:hover img.socialBranca {
     width: 42px;
     height: 42px;
 }
 
-header#menuTopo nav#socialMenuTopo a span {
+header#menuTopo div nav#socialMenuTopo a span {
     width: 100px;
     height: 30px;
     background-color: #2E4147;
@@ -130,7 +133,7 @@ header#menuTopo nav#socialMenuTopo a span {
     transition: 0.2s;
 }
 
-header#menuTopo nav#socialMenuTopo a span::after {
+header#menuTopo div nav#socialMenuTopo a span::after {
     content: "";
     position: absolute;
     bottom: 100%;
@@ -141,19 +144,19 @@ header#menuTopo nav#socialMenuTopo a span::after {
     border-color: transparent transparent #2E4147 transparent;
 }
 
-header#menuTopo nav#socialMenuTopo a:hover span {
+header#menuTopo div nav#socialMenuTopo a:hover span {
     top: 55px;
     opacity: 1;
 }
 
-header#menuTopo nav#btMobile {
+header#menuTopo div nav#btMobile {
     width: 100%;
     height: 100%;
     position: relative;
     display: none;
 }
 
-header#menuTopo nav#btMobile button#btAbrirGS {
+header#menuTopo div nav#btMobile button#btAbrirGS {
     width: 30px;
     height: 30px;
     background-color: transparent;
@@ -167,7 +170,7 @@ header#menuTopo nav#btMobile button#btAbrirGS {
     cursor: pointer;
 }
 
-header#menuTopo nav#btMobile button#btAbrirGL {
+header#menuTopo div nav#btMobile button#btAbrirGL {
     width: 30px;
     height: 30px;
     background-color: transparent;
@@ -181,32 +184,26 @@ header#menuTopo nav#btMobile button#btAbrirGL {
     cursor: pointer;
 }
 
-header#menuTopo nav#btMobile button#btAbrirGL img,
-header#menuTopo nav#btMobile button#btAbrirGS img {
+header#menuTopo div nav#btMobile button#btAbrirGL img,
+header#menuTopo div nav#btMobile button#btAbrirGS img {
     width: 100%;
     height: 100%;
 }
 
-header#menuTopo nav#btMobile button#btAbrirGL img.gridPreta,
-header#menuTopo nav#btMobile button#btAbrirGS img.hamPreta {
+header#menuTopo div nav#btMobile button#btAbrirGL img.gridPreta,
+header#menuTopo div nav#btMobile button#btAbrirGS img.hamPreta {
     display: none;
 }
 
 @media only screen and (max-width: 1067px) {
 
-    header#menuTopo nav#btMobile {
+    header#menuTopo div nav#btMobile {
         display: block;
     }
 
-    header#menuTopo nav#linksMenuTopo,
-    header#menuTopo nav#socialMenuTopo {
+    header#menuTopo div nav#linksMenuTopo,
+    header#menuTopo div nav#socialMenuTopo {
         display: none;
-    }
-
-} @media only screen and (max-width: 816px) {
-
-    header#menuTopo { 
-         justify-content: space-around;
     }
 
 }
@@ -338,7 +335,7 @@ section#banner main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(69, 191, 238, 0.75);
+    background-color: rgba(69, 191, 238, 0.5);
 }
 
 section#banner main h1 {
@@ -409,6 +406,10 @@ section#banner main button span {
         background-size: auto;
     }
 
+    section#banner main button {
+        display: none;
+    }
+
 }
 
 /* Index.html */
@@ -439,7 +440,7 @@ section#sobreMim header {
 }
 
 section#sobreMim header h1 {
-    padding-top: 10px;
+    padding-top: 5px;
     font-size: 28px;
     font-weight: 900;
     color: #2E4147;
@@ -468,11 +469,12 @@ section#sobreMim main#competencia {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #F4FAFC;
+    background-color: #F5F5F5;
 }
 
 section#sobreMim main#competencia article {
     width: 70%;
+    padding-top: 25px;
     max-height: 100%;
     margin-bottom: 50px; 
     display: flex;
@@ -480,31 +482,38 @@ section#sobreMim main#competencia article {
     align-items: flex-start;
 }
 
-section#sobreMim main#competencia article h1 {
+section#sobreMim main#competencia article header {
     width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section#sobreMim main#competencia article h1 {
     font-size: 32px;
     font-weight: 900;
-    color: #174668;
-    margin-bottom: 15px;
+    color: #2E4147;
+    margin-bottom: 50px;
     text-align: center;
     letter-spacing: 1px;
 }
 
 section#sobreMim main#competencia article h2 {
-    width: 100%;
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 18px;
+    font-weight: 600;
     color: #17AFEA;
     text-align: start;
     margin-bottom: 10px;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
+    left: 0;
 }
 
 section#sobreMim main#competencia article div {
     width: 100%;
     height: 30px;
-    background-color: #E7F7FC;
-    border: 1px solid #E7F7FC;
+    background-color: #F0F0F0;
+    border: 1px solid #F0F0F0;
     border-radius: 5px;
     position: relative;
     margin-bottom: 25px;
@@ -524,28 +533,29 @@ main#metas {
     max-height: 100%;
     padding: 25px 0px 25px 0px;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
-    flex-wrap: wrap;
+    align-items: center;
 }
 
 main#metas h1 {
-    width: 100%;
-    text-align: center;
     margin-bottom: 50px;
-    color: #174668;
+    color: #2E4147;
     font-size: 28px;
     letter-spacing: 1px;
+    padding-top: 5px;
+    border-top: 3px solid rgba(0, 23, 31, 0.3);
 }
 
 main#metas article {
-    width: 350px;
+    width: 90%;
     max-height: 100%;
     padding: 25px 15px 25px 15px;
     margin-bottom: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #F4FAFC;
+    background-color: #ffffff;
     box-shadow: 0px 2px 4px rgba(0, 23, 31, 0.3), 0px 4px 8px rgba(0, 23, 31, 0.1);
 }
 
@@ -555,6 +565,7 @@ main#metas article h1 {
     font-size: 28px;
     font-weight: 900;
     letter-spacing: 1px;
+    border: none;
 }
 
 main#metas article p {
@@ -802,18 +813,23 @@ footer#rodape {
 footer#rodape article {
     width: 100%;
     max-height: 100%;
+    padding: 0px 2.5% 0px 2.5%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
 }
 
-footer#rodape article main {
-    width: 400px;
-    max-height: 100%;
-    margin: 10px 0px 10px 0px;
-    display: flex;
+footer#rodape article:nth-child(3) {
     justify-content: center;
+}
+
+footer#rodape article main {
+    width: 350px;
+    max-height: 100%;
+    margin: 25px 0px 25px 0px;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -854,7 +870,7 @@ footer#rodape hr {
     width: 95%;
     height: 2px;
     border: none;
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 @media only screen and (max-width: 967px) {

@@ -85,9 +85,10 @@ $(window).on("scroll", function () {
             var bgParallax = $(this);
             var top = $(window).scrollTop();
             var heightBanner = $("#banner").height();
+            var widthWindow = $(window).width();
 
             $(window).scroll(function () {
-                if (top <= heightBanner) {
+                if (top <= heightBanner && widthWindow >= 1067) {
                     var posBg = -(top / bgParallax.data("speed"));
                     bgParallax.css({ "background-position": "50% " + posBg + "px" });
                 }
