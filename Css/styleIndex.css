@@ -412,6 +412,45 @@ section#banner main button span {
 
 }
 
+section#loading {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 30;
+}
+
+section#loading div {
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+section#loading div span {
+    width: 90px;
+    height: 90px;
+    background-color: transparent;
+    border: 10px solid #F0F0F0;
+    border-top: 10px solid #17AFEA;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: loader 1s linear infinite;
+}
+
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 /* Index.html */
 
 /*  Tela sobre mim */
@@ -531,11 +570,11 @@ section#sobreMim main#competencia article div span {
 main#metas {
     width: 100%;
     max-height: 100%;
-    padding: 25px 0px 25px 0px;
+    padding: 100px 0px 25px 0px;
     display: flex;
-    flex-direction: column;
     justify-content: space-around;
-    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
 }
 
 main#metas h1 {
@@ -545,31 +584,56 @@ main#metas h1 {
     letter-spacing: 1px;
     padding-top: 5px;
     border-top: 3px solid rgba(0, 23, 31, 0.3);
+    position: absolute;
+    top: 25px ;
 }
 
 main#metas article {
-    width: 90%;
-    max-height: 100%;
+    width: 350px;
+    height: 350px;
     padding: 25px 15px 25px 15px;
     margin-bottom: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #ffffff;
+    justify-content: space-around;
     box-shadow: 0px 2px 4px rgba(0, 23, 31, 0.3), 0px 4px 8px rgba(0, 23, 31, 0.1);
+    position: relative;
+}
+
+main#metas article:nth-child(2) {
+    background-color: #ddef4f;
+    transform: rotate(5deg);
+}
+
+main#metas article:nth-child(3) {
+    background-color: #009dd4;
+}
+
+main#metas article:nth-child(4) {
+    background-color: #ff5ab6;
+    transform: rotate(-7deg);
+}
+
+main#metas article img {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 5px;
 }
 
 main#metas article h1 {
     margin-bottom: 25px;
-    color: #17AFEA;
+    color: #2E4147;
     font-size: 28px;
     font-weight: 900;
     letter-spacing: 1px;
     border: none;
+    position: relative;
 }
 
 main#metas article p {
-    color: #174668;
+    color: #2E4147;
     text-align: center;
     font-weight: 100;
     font-size: 18px;
@@ -618,6 +682,16 @@ main#links p a {
     }
 
 }
+
+@media only screen and (max-width: 350px) {
+
+    main#metas article {
+        width: 80%;
+    }
+
+} 
+
+
 
 /* Portfolio.html  */
 

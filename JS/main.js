@@ -124,3 +124,7 @@ function aplicarBGAleatorio() {
         }
     }
 }
+
+$(window).on("load", function() {
+    $("#loading").fadeOut(200);
+});
