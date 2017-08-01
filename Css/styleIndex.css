@@ -1,5 +1,7 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import url('https://fonts.googleapis.com/css?family=Coming+Soon');
+/* https://coolors.co/ffffff-00171f-456b86-17afea-f7f7f7 */
 
 *, 
 *::before,
@@ -36,7 +38,7 @@ header#menuTopo {
 header#menuTopo div {
     width: 100%;
     height: 100%;
-    padding: 0px 25px 0px 25px;
+    padding: 0px 15px 0px 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -55,14 +57,10 @@ header#menuTopo div nav#linksMenuTopo a {
     padding: 5px;
     font-size: 16px;
     font-weight: 100;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     text-align: center;
     color: #ffffff;
     cursor: pointer;
-}
-
-header#menuTopo div nav#linksMenuTopo a:hover {
-    text-decoration: underline;
 }
 
 header#menuTopo div nav#socialMenuTopo {
@@ -117,7 +115,7 @@ header#menuTopo div nav#socialMenuTopo a:hover img.socialBranca {
 header#menuTopo div nav#socialMenuTopo a span {
     width: 100px;
     height: 30px;
-    background-color: #2E4147;
+    background-color: #1D1D1D;
     color: #ffffff;
     font-style: italic;
     border-radius: 5px;
@@ -141,7 +139,7 @@ header#menuTopo div nav#socialMenuTopo a span::after {
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: transparent transparent #2E4147 transparent;
+    border-color: transparent transparent #1D1D1D transparent;
 }
 
 header#menuTopo div nav#socialMenuTopo a:hover span {
@@ -208,137 +206,27 @@ header#menuTopo div nav#btMobile button#btAbrirGS img.hamPreta {
 
 }
 
-/* Menu Hamburguer */
+/* Banner Inicial */
 
-nav#menuHam {
+section#bannerInicial {
     width: 100%;
-    height: 100vh;
-    position: fixed;
-    background-color: rgba(69, 191, 238, 0.95);
-    left: -100vw;
-    opacity: 0;
-    z-index: 20;
-    -webkit-transition: 0.5s;
-    -moz-transition: 0.5s;
-    -o-transition: 0.5s;
-    transition: 0.5s;
-}
-
-nav#menuHam main {
-    width: 100%;
-    height: 100%;
-    position: relative;
+    height: 75vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-nav#menuHam main button {
-    width: 30px;
-    height: 30px;
-    background-color: transparent;
-    border: 2px solid #ffffff;
-    border-radius: 50%;
-    color: #ffffff;
-    font-weight: 900;
-    position: absolute;
-    top: 25px;
-    right: 25px;
-    cursor: pointer;
-}
-
-nav#menuHam main a,
-nav#menuHam main p {
-    color: #ffffff;
-    font-size: 32px;
-    font-weight: 900;
-    margin: 25px;
-    letter-spacing: 1px;
-    cursor: pointer;
-}
-
-/* Menu Grid */
-
-nav#menuGrid {
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    background-color: rgba(69, 191, 238, 0.95);
-    right: -100vw;
-    opacity: 0;
-    z-index: 30;
-    -webkit-transition: 0.5s;
-    -moz-transition: 0.5s;
-    -o-transition: 0.5s;
-    transition: 0.5s;
-}
-
-nav#menuGrid main {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-nav#menuGrid main button {
-    width: 30px;
-    height: 30px;
-    background-color: transparent;
-    border: 2px solid #ffffff;
-    border-radius: 50%;
-    color: #ffffff;
-    font-weight: 900;
-    position: absolute;
-    top: 25px;
-    right: 25px;
-    cursor: pointer;
-}
-
-nav#menuGrid main a {
-    width: 50px;
-    height: 50px;
-    margin: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-nav#menuGrid main a img{
-    width: 32px;
-    height: 32px;
-}
-
-/* Banner */
-
-section#banner {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    background-image: url("../Imagens/background3.jpg");
     background-repeat: no-repeat;
-    background-position: 50% 0;
-    background-attachment: fixed;
+    background-position: 25% 50%;
     background-size: cover;
-}
-
-section#banner main {
-    width: 100%;
-    height: 100%;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(69, 191, 238, 0.5);
 }
 
-section#banner main h1 {
+section#bannerInicial h1 {
     padding: 5px 10px 5px 10px;
     font-size: 64px;
     text-align: center;
@@ -346,9 +234,10 @@ section#banner main h1 {
     color: #ffffff;
     font-weight: 900;
     text-shadow: 0px 2px 2px rgba(0, 23, 31, 0.2), 0px 4px 4px rgba(0, 23, 31, 0.1);
+    border-top: 2px solid #ffffff;
 }
 
-section#banner main h2 {
+section#bannerInicial h2 {
     padding: 5px 10px 5px 10px;
     font-size: 32px;
     text-align: center;
@@ -356,57 +245,16 @@ section#banner main h2 {
     color: #ffffff;
     font-weight: 100;
     text-shadow: 0px 2px 2px rgba(0, 23, 31, 0.2), 0px 4px 4px rgba(0, 23, 31, 0.1);
-}
-
-section#banner main button {
-    width: 20px;
-    height: 30px;
-    background-color: transparent;
-    border: 4px solid rgba(255, 255, 255, 0.5);
-    border-radius: 10px;
-    cursor: pointer;
-    position: absolute;
-    bottom: 10px;
-    transition: 0.5s;
-    -webkit-transition: 0.5s;
-    -moz-transition: 0.5s;
-    -o-transition: 0.5s;
-}
-
-section#banner main button span {
-    width: 6px;
-    height: 6px;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 50%;
-    position: absolute;
-    bottom: 13px;
-    left: 3px;
-    opacity: 0;
-    animation: scroll 1.5s infinite;
-}
-
-@keyframes scroll {
-    0% {
-        bottom: 13px;
-        opacity: 0;
-    }
-    50% {
-        bottom: 8px;
-        opacity: 1;
-    }
-    100% {
-        bottom: 3px;
-        opacity: 0;
-    }
+    border-bottom: 2px solid #ffffff;
 }
 
 @media only screen and (max-width: 816px) {
 
-    section#banner{
+    section#bannerInicial{
         background-size: auto;
     }
 
-    section#banner main button {
+    section#bannerInicial button {
         display: none;
     }
 
@@ -433,13 +281,13 @@ section#loading div span {
     width: 90px;
     height: 90px;
     background-color: transparent;
-    border: 10px solid #F0F0F0;
-    border-top: 10px solid #17AFEA;
+    border: 2px solid #F0F0F0;
+    border-top: 2px solid #17AFEA;
     border-radius: 50%;
     position: absolute;
     top: 0;
     left: 0;
-    animation: loader 1s linear infinite;
+    animation: loader 0.5s ease-in-out infinite;
 }
 
 @keyframes loader {
@@ -458,9 +306,27 @@ section#loading div span {
 section#sobreMim {
     width: 100%;
     max-height: 100%;
-    padding: 25px 0px 25px 0px;
+    padding: 50px 0px 25px 0px;
+    position: relative;
 }
 
+section#sobreMim h1#abaSobreMim {
+    width: 400px;
+    height: 75px;
+    background-color: #ffffff;
+    position: absolute;
+    top: -37.5px;
+    left: 50%;
+    margin-left: -200px;
+    font-size: 28px;
+    font-weight: 900;
+    color: #1D1D1D;
+    letter-spacing: 1px;
+    box-shadow: 0px -4px 8px rgba(0, 23, 31, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 section#sobreMim hr {
     width: 100%;
@@ -478,24 +344,14 @@ section#sobreMim header {
     padding: 25px 0px 25px 0px;
 }
 
-section#sobreMim header h1 {
-    padding-top: 5px;
-    font-size: 28px;
-    font-weight: 900;
-    color: #2E4147;
-    letter-spacing: 0.5px;
-    margin-bottom: 25px;
-    border-top: 3px solid rgba(0, 23, 31, 0.3);
-}
-
 section#sobreMim header p {
-    width: 550px;
+    width: 50%;
     padding: 0px 10px 0px 10px;
-    font-size: 20px;
-    font-weight: 100;
-    color: #174668;
-    text-align: center;
-    letter-spacing: 1px;
+    font-size: 22px;
+    font-weight: 300;
+    color: #1D1D1D;
+    text-align: justify;
+    letter-spacing: 0.5px;
     margin-bottom: 25px;
 }
 
@@ -504,18 +360,19 @@ section#sobreMim header p {
 section#sobreMim main#competencia {
     width: 100%;
     max-height: 100%;
-    padding: 25px 0px 25px 0px;
+    padding: 50px 0px 25px 0px;
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
     align-items: center;
-    background-color: #F5F5F5;
+    background-color: #F7F7F7;
 }
 
 section#sobreMim main#competencia article {
-    width: 70%;
+    width: 350px;
     padding-top: 25px;
     max-height: 100%;
-    margin-bottom: 50px; 
+    margin-bottom: 25px; 
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -532,7 +389,7 @@ section#sobreMim main#competencia article header {
 section#sobreMim main#competencia article h1 {
     font-size: 32px;
     font-weight: 900;
-    color: #2E4147;
+    color: #1D1D1D;
     margin-bottom: 50px;
     text-align: center;
     letter-spacing: 1px;
@@ -541,7 +398,7 @@ section#sobreMim main#competencia article h1 {
 section#sobreMim main#competencia article h2 {
     font-size: 18px;
     font-weight: 600;
-    color: #17AFEA;
+    color: #002239;
     text-align: start;
     margin-bottom: 10px;
     letter-spacing: 0.5px;
@@ -550,7 +407,7 @@ section#sobreMim main#competencia article h2 {
 
 section#sobreMim main#competencia article div {
     width: 100%;
-    height: 30px;
+    height: 7px;
     background-color: #F0F0F0;
     border: 1px solid #F0F0F0;
     border-radius: 5px;
@@ -560,7 +417,7 @@ section#sobreMim main#competencia article div {
 
 section#sobreMim main#competencia article div span {
     height: 100%;
-    background-color: #174668;
+    background-color: #0099D3;
     border-radius: 5px;
     position: absolute;
 }
@@ -578,20 +435,18 @@ main#metas {
 }
 
 main#metas h1 {
-    margin-bottom: 50px;
-    color: #2E4147;
-    font-size: 28px;
-    letter-spacing: 1px;
-    padding-top: 5px;
-    border-top: 3px solid rgba(0, 23, 31, 0.3);
     position: absolute;
-    top: 25px ;
+    top: 25px;
+    font-size: 28px;
+    font-weight: 900;
+    color: #1D1D1D;
+    letter-spacing: 1px;
 }
 
 main#metas article {
     width: 350px;
     height: 350px;
-    padding: 25px 15px 25px 15px;
+    padding: 50px 15px 25px 15px;
     margin-bottom: 25px;
     display: flex;
     flex-direction: column;
@@ -624,20 +479,23 @@ main#metas article img {
 
 main#metas article h1 {
     margin-bottom: 25px;
-    color: #2E4147;
-    font-size: 28px;
+    color: #1D1D1D;
+    font-size: 26px;
     font-weight: 900;
     letter-spacing: 1px;
     border: none;
     position: relative;
+    top: 10px;
+    font-family: 'Coming Soon', cursive;
 }
 
 main#metas article p {
-    color: #2E4147;
+    color: #1D1D1D;
     text-align: center;
-    font-weight: 100;
+    font-weight: 500;
     font-size: 18px;
     letter-spacing: 0.5px;
+    font-family: 'Coming Soon', cursive;
 }
 
 /* links */
@@ -653,7 +511,7 @@ main#links {
 }
 
 main#links p {
-    color: #174668;
+    color: #1D1D1D;
     letter-spacing: 0.5px;
     text-align: center;
     font-weight: 100;
@@ -681,109 +539,174 @@ main#links p a {
         width: 90%;
     }
 
-}
-
-@media only screen and (max-width: 350px) {
-
     main#metas article {
         width: 80%;
     }
 
-} 
-
-
-
-/* Portfolio.html  */
-
-/* Tela avisos */
-
-section#avisos {
-    width: 100%;
-    max-height: 100%;
-    padding: 50px 0px 50px 0px;
+    main#metas article:nth-child(2),
+    main#metas article:nth-child(3),
+    main#metas article:nth-child(4) {
+        transform: rotate(0deg);
+    }
 }
 
-section#avisos h1 {
+/* Tela portfolio */
+
+section#portfolio {
     width: 100%;
-    color: #174668;
-    text-align: center;
+    max-height: 100%;
+    padding: 50px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #17AFEA;
+    position: relative;
+}
+
+main#bannerPortfolio {
+    width: 100%;
+    height: 50vh;
+    background-image: url("../Imagens/background2.jpg");
+    background-repeat: no-repeat;
+    background-position: 25% 50%;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section#portfolio h1#abaPortfolio {
+    width: 400px;
+    height: 75px;
+    background-color: #17AFEA;
+    position: absolute;
+    top: -37.5px;
+    left: 50%;
+    margin-left: -200px;
+    font-size: 28px;
+    font-weight: 900;
+    color: #ffffff;
     letter-spacing: 1px;
-    font-weight: 100;
-    font-size: 32px;
+    box-shadow: 0px -4px 8px rgba(0, 23, 31, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.divisoria {
-    width: 90%;
-    height: 1px;
-    margin-left: 5%;
-    border: none;
-    background-color: rgba(69, 191, 238, 0.5);
+section#portfolio p {
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    margin: 25px 0px 25px 0px;
 }
 
-section#trabalhos {
+section#portfolio main {
     width: 100%;
     max-height: 100%;
-    padding: 50px 0px 50px 0px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
 
-section#trabalhos h1 {
+section#portfolio main:nth-child(4) {
+    background-color: #0099D3;
+    padding-bottom: 25px;
+}
+
+section#portfolio main h1#abaProjetos {
     width: 100%;
-    color: #174668;
     text-align: center;
-    letter-spacing: 1px;
-    font-weight: 100;
-    font-size: 32px;
+    font-size: 28px;
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    margin: 25px 0px 25px 0px;
+}
+
+section#portfolio main article {
+    width: 250px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     margin-bottom: 25px;
 }
 
-section#trabalhos article {
-    width: 273.2px;
-    height: 350px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-
-section#trabalhos article img {
-    width: 100%;
-    height: 153.6px;
-    margin-bottom: 15px;
-    box-shadow: 0px 2px 4px rgba(0, 23, 31, 0.2), 0px 4px 8px rgba(0, 23, 31, 0.1);
-}
-
-section#trabalhos article h1 {
-    width: 100%;
-    color: #174668;
-    text-align: center;
+section#portfolio main article h1#logoMyStore {
+    font-size: 100px;
+    color: #fffafa;
     letter-spacing: 1px;
     font-weight: 100;
-    font-size: 32px;
+    padding: 1px;
+    border: 1px solid #fffafa;
+    margin: 0px 2px 0px 2px;
 }
 
-section#trabalhos article a {
-    width: 100%;
-    height: 50px;
+section#portfolio main article h2 {
+    font-size: 28px;
+    color: #ffffff;
+    letter-spacing: 1px;
+    font-weight: 900;
 }
 
-section#trabalhos article a button {
-    width: 100%;
-    height: 100%;
+section#portfolio main article button {
+    width: 200px;
+    height: 40px;
     background-color: transparent;
-    color: #17AFEA;
-    letter-spacing: 1px;
-    font-weight: 100;
-    font-size: 26px;
-    border: 1px solid #17AFEA;
+    color: #ffffff;
+    font-size: 18px;
+    border: 1px solid #fffafa;
     cursor: pointer;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
 }
 
-/* contato.html */
+section#portfolio main article button.blocked {
+    width: 200px;
+    height: 40px;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    cursor: not-allowed;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+}
+
+section#portfolio main article button:hover {
+    background-color: #ffffff;
+    color: #17AFEA;
+}
+
+section#portfolio main article button.blocked:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.9);
+}
 
 /* Tela contato */
+
+section#bannerContato {
+    width: 100%;
+    height: 50vh;
+    background-image: url("../Imagens/background1.jpg");
+    background-repeat: no-repeat;
+    background-position: 25% 50%;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 section#contato {
     width: 100%;
@@ -791,7 +714,26 @@ section#contato {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 50px 0px 50px 0px;
+    padding: 75px 0px 25px 0px;
+    position: relative;
+}
+
+section#contato h1#abaContato {
+    width: 400px;
+    height: 75px;
+    background-color: #ffffff;
+    position: absolute;
+    top: -37.5px;
+    left: 50%;
+    margin-left: -200px;
+    font-size: 28px;
+    font-weight: 900;
+    color: #1D1D1D;
+    letter-spacing: 1px;
+    box-shadow: 0px -4px 8px rgba(0, 23, 31, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 section#contato article,
@@ -804,17 +746,8 @@ section#contato article form {
     flex-wrap: wrap;
 }
 
-section#contato article h1 {
-    color: #174668;
-    font-size: 28px;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-    font-weight: 100;
-    text-align: center;
-}
-
 section#contato article p {
-    color: #174668;
+    color: #1D1D1D;
     font-size: 16px;
     letter-spacing: 1px;
     margin-bottom: 25px;
@@ -829,8 +762,8 @@ section#contato article form button {
     margin-bottom: 25px;
     padding: 5px;
     background-color: #ffffff;
-    border: 1px solid #174668;
-    color: #174668;
+    border: 1px solid #1D1D1D;
+    color: #1D1D1D;
     font-size: 16px;
     transition: 0.2s;
     -webkit-transition: 0.2s;
@@ -845,8 +778,8 @@ section#contato article form textarea {
     resize: none;
     padding: 5px;
     background-color: #ffffff;
-    border: 1px solid #174668;
-    color: #174668;
+    border: 1px solid #1D1D1D;
+    color: #1D1D1D;
     font-size: 16px;
 }
 
@@ -856,7 +789,7 @@ section#contato article form input:focus {
 }
 
 section#contato article form button:hover {
-    background-color: #174668;
+    background-color: #1D1D1D;
     color: #ffffff;
     cursor: pointer;
 }
@@ -877,7 +810,7 @@ footer#rodape {
     padding: 25px 0px 25px 0px;
     width: 100%;
     max-height: 100%;
-    background-color: #2E4147;
+    background-color: #1D1D1D;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

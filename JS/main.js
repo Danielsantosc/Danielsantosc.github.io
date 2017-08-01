@@ -1,50 +1,3 @@
-$(document).ready(function () {
-
-    aplicarBGAleatorio();
-
-    // Menu Hamburguer
-
-    $("#btAbrirGS").click(function () {
-        $("#menuHam").css({ "left": "0px", "opacity": "1" });
-    });
-
-    $(".closeMenuHam").click(function () {
-        $("#menuHam").css({ "left": "-100vw", "opacity": "0" });
-    });
-
-    // Menu Grid
-
-    $("#btAbrirGL").click(function () {
-        $("#menuGrid").css({ "right": "0px", "opacity": "1" });
-    });
-
-    $(".closeMenuGrid").click(function () {
-        $("#menuGrid").css({ "right": "-100vw", "opacity": "0" });
-    });
-
-    // Botão ver mais banner
-
-    $("#gtConteudo").click(function () {
-        var Banner = $("#banner").height();
-        $("html, body").animate({scrollTop : Banner - 75}, 850);
-    });
-
-    // box contato
-
-    $("#closeBoxContato").click(function () {
-        $("#boxContato").css({ "margin-bottom": "-215px" });
-        $("#boxContato h1").css({ "width" : "100%", "cursor" : "pointer" });
-        $("#closeBoxContato").fadeOut(200);
-    });
-
-    $("#boxContato h1").click(function () {
-        $("#boxContato").css({ "margin-bottom": "0px" });
-        $("#boxContato h1").css({ "width" : "150px", "cursor" : "text" });
-        $("#closeBoxContato").fadeIn(200);
-    });
-
-});
-
 // função no scroll
 
 $(window).on("scroll", function () {
@@ -77,53 +30,7 @@ $(window).on("scroll", function () {
         menuTopoMenusBranca.css({ "display" : "block" });
         iconeScroll.css({ "opacity" : "1" });
     }
-
-    // parallax
-
-    if ($("#banner").length) {
-        $("#banner").each(function () {
-            var bgParallax = $(this);
-            var top = $(window).scrollTop();
-            var heightBanner = $("#banner").height();
-            var widthWindow = $(window).width();
-
-            $(window).scroll(function () {
-                if (top <= heightBanner && widthWindow >= 1067) {
-                    var posBg = -(top / bgParallax.data("speed"));
-                    bgParallax.css({ "background-position": "50% " + posBg + "px" });
-                }
-            });
-        });
-    }
 });
-
-function aplicarBGAleatorio() {
-    var numeroBG = Math.floor(Math.random() * 5);
-
-    if ($("#banner").length) {
-        $("#banner").css({ "background-image": "url('Imagens/" + backgroundAleatorio(numeroBG) + "')" });
-    }
-
-    function backgroundAleatorio(x) {
-        switch (x) {
-            case 0:
-                return "background0.jpg";
-                break;
-            case 1:
-                return "background1.jpg";
-                break;
-            case 2:
-                return "background2.jpg";
-                break;
-            case 3:
-                return "background3.jpg";
-                break;
-            case 4:
-                return "background4.jpg";
-                break;
-        }
-    }
-}
 
 $(window).on("load", function() {
     $("#loading").fadeOut(200);
