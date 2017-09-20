@@ -4,6 +4,8 @@ GEM
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
     colorator (1.1.0)
+    dansz (0.1.0)
+      jekyll (~> 3.5)
     ffi (1.9.18-x64-mingw32)
     forwardable-extended (2.6.0)
     jekyll (3.5.0)
@@ -52,6 +54,7 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
+  dansz (~> 0.1.0)
   jekyll (= 3.5.0)
   jekyll-feed (~> 0.6)
   tzinfo-data

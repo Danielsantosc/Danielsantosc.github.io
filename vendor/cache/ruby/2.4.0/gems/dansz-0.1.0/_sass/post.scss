@@ -1,0 +1,22 @@
+// começo conteudo
+section#conteudo {
+    padding: 100px 15% 50px 15%;
+    font-size: $fontMedium;
+    font-weight: $fontw2;
+    line-height: 1.5em;
+    text-align: justify;
+}
+// fim conteudo
+
+// começo comentarios
+section#comentarios {
+    padding: 50px 15% 50px 15%;
+}
+// fim comentarios
+
+@media only screen and (max-width: 800px) {
+    section#conteudo,
+    section#comentarios {
+        padding: 100px 5% 50px 5%;
+    }
+}
