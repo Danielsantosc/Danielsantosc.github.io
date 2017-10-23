@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+
+/* Geral */
+*, 
+*::before,
+*::after {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: 0 none;
+    box-shadow: 0 0 0;
+}
+
+.title {
+    font-size: xx-large;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    padding: 5px 10px 5px 10px;
+    color: #FFFFFF;
+    background-color: #20313d;
+    margin: 25px;
+}
+
+.title:hover {
+    color: #20313d;
+    background-color: #fafafa;
+}
+
+body, html {
+    transition-timing-function: ease-in-out;
+}
+/* Geral */
+
+/* Header */
+#header {
+    width: 100%;
+    height: 75px;
+    background-color: rgba(32, 49, 61, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 15px 0px 15px;
+    position: fixed;
+    z-index: 10;
+    transition: 0.2s;
+}
+
+#header h1 {
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+#header h1::first-letter {
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    padding: 0px 5px 0px 6px;
+    margin-right: 3px;
+    font-weight: 400;
+}
+
+#header nav {
+    width: 300px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header nav button {
+    width: 100px;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
+
+#header nav button:hover {
+    background-color: rgba(32, 49, 61, 0.7);
+}
+
+#header .oMenu {
+    width: 100px;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    display: none;
+}
+/* Header */
+
+/* Header mobile */
+#hMobile {
+    width: 100%;
+    max-height: 100%;
+    background-color: rgba(32, 49, 61, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 75px;
+    left: 0;
+    opacity: 1;
+    z-index: 10;
+}
+
+#hMobile button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
+
+#hMobile button:hover {
+    background-color: rgba(32, 49, 61, 0.7);
+}
+/* Header mobile */
+
+@media screen and (max-width: 550px) {
+    #header nav {
+        display: none;
+    }
+
+    #header .oMenu {
+        display: block;
+    }
+}
+
+/* Tela Inicial */
+#telaInicial {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../Img/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#telaInicial #bgDesfocar {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(32, 49, 61, 0.5);
+    padding-left: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+}
+
+#telaInicial #bgDesfocar h1 {
+    font-size: 55px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: #20313d;
+    background-color: #ffffff;
+    padding: 0px 25px 0px 15px;
+    margin-bottom: 15px;
+}
+
+#telaInicial #bgDesfocar h2 {
+    font-size: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #20313d;
+    background-color: #ffffff;
+    padding: 0px 15px 0px 15px;
+    margin-bottom: 15px;
+}
+
+#telaInicial #bgDesfocar h1:hover,
+#telaInicial #bgDesfocar h2:hover {
+    color: #FFFFFF;
+    background-color: #20313d;
+}
+
+#telaInicial #bgDesfocar #verMais {
+    width: 150px;
+    height: 45px;
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #20313d;
+    background-color: #ffffff;
+    border: none;
+    position: absolute;
+    left: 50%;
+    margin-left: -75px;
+    bottom: 5%;
+    cursor: pointer;
+}
+
+#telaInicial #bgDesfocar #verMais::before {
+    content: "Ver mais";
+    width: 150px;
+    height: 0px;
+    color: #ffffff;
+    background-color: #20313d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+#telaInicial #bgDesfocar #verMais:hover::before {
+    opacity: 1;
+    height: 45px;
+
+}
+/* Tela Inicial */
+
+/* Sobre Mim */
+#sobreMim {
+    width: 100%;
+    max-height: 100%;
+    padding: 50px 50px 50px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#sobreMim p {
+    width: 450px;
+    text-align: justify;
+    font-size: large;
+    font-weight: 300;
+    line-height: 2rem;
+    margin: 25px;
+}
+
+#sobreMim #comps {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 50px;
+}
+
+#sobreMim #comps article {
+    width: 150px;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+}
+
+#sobreMim #comps article img {
+    width: 64px;
+    height: 64px;
+}
+
+#sobreMim #comps article p {
+    width: 100%;
+    text-align: center;
+    font-size: large;
+    font-weight: 300;
+    line-height: 2rem;
+    margin: 0px;
+}
+/* Sobre Mim */
+
+@media screen and (max-width: 500px) {
+    #sobreMim p {
+        width: 95%;
+    }
+}
+
+/* Projetos */
+#Projetos {
+    width: 100%;
+    max-height: 100%;
+    background-color: #fafafa;
+    padding: 50px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Projetos #tiles {
+    width: 100%;
+    max-height: 100%;
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+#Projetos #tiles .tile {
+    width: 350px;
+    height: 400px;
+    margin: 25px;
+    padding: 15px;
+    box-shadow: 0px 2px 4px rgba(32, 49, 61, 0.2), 0px 4px 8px rgba(32, 49, 61, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+#Projetos #tiles .tile:hover {
+    box-shadow: 0px 2px 4px rgba(32, 49, 61, 0.3), 0px 4px 8px rgba(32, 49, 61, 0.2);
+}
+
+#Projetos #tiles .tile h1 {
+    font-size: xx-large;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #20313d;
+}
+
+#Projetos #tiles .tile p {
+    width: 90%;
+    text-align: justify;
+    font-size: medium;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    color: #20313d;
+}
+
+#Projetos #tiles .tile button {
+    width: 100%;
+    height: 40px;
+}
+/* Projetos */
+
+/* Contato */
+#Contato {
+    width: 100%;
+    max-height: 100%;
+    padding: 50px 50px 50px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Contato form {
+    width: 300px;
+    max-height: 100%;
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#Contato form input {
+    width: 145px;
+    height: 30px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #20313d;
+}
+
+#Contato form textarea {
+    width: 300px;
+    margin-bottom: 10px;
+    padding: 5px;
+    resize: none;
+    border: 1px solid #20313d;
+}
+
+#Contato form input:hover,
+#Contato form textarea:hover,
+#Contato form input:focus,
+#Contato form textarea:focus {
+    border: 1px solid #000000;
+}
+
+#Contato form button {
+    width: 300px;
+    height: 30px;
+    border: none;
+    color: #FFFFFF;
+    background-color: #20313d;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#Contato form button:hover {
+    background-color: black;
+}
+/* Contato */
+
+/* Rodapé */
+#Rodape {
+    width: 100%;
+    height: 150px;
+    background-color: #20313d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Rodapé */
